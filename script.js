@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let gameScore = ''
   let totalScoreWin = 0
   let totalScoreLose = 0
-  
+
 
   /////////////////////////ALOITAME PELI////////////////////////////////////////
 
@@ -28,10 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
       startGame()
     }, 2000)
   })
-  
+
 
   ////////////////////////////1-10 PAINONAPPIA OBJECTISTÄ ESTIMME JOKA NAPPI MIKÄ PAINOTTU//////////////////////////////
-  
+
   numberBtn.forEach((key) => {
     key.addEventListener('click', (event) => {
       let buttonNumber = event.target.textContent
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
         gameCounter--
 
 ////////////////////////////////KUN PELI LÄPI JA NUMEROT EI LÖIDETTU////////////////////////////////////////////////////
-      
+
       if (gameCounter == 0 && buttonNumber != randomNumber) {
         aboutRandomNumber.innerHTML = `Hävisit, numeroni oli: <strong>${randomNumber}</strong>`
         gameScoreDecrement()
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
 ///////////////////////////////PELIN ALOISTUS FUNCTION///////////////////////////////////////////////
-  
+
   startGame = () => {
     gameContent.style.display = 'block'
     activeNumberButtons()
@@ -162,15 +162,15 @@ document.addEventListener('DOMContentLoaded', () => {
     buttonStart.classList.add('buttonStartAfterClose')
     gameContent.style.display = 'none'
     scoreAfterGame.style.display = 'block'
-    scoreAfterGame.innerHTML = ` Your Win: ${totalScoreWin} <br>
-                               Your Lose: ${totalScoreLose}`
-    
+    scoreAfterGame.innerHTML = ` Voitetut pelit: ${totalScoreWin} <br>
+                               Hävityt pelit: ${totalScoreLose}`
+
   })
 
 
 
 
 
-  
+
 
 })
